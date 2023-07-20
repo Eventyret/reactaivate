@@ -2,7 +2,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
-import { ImageIcon } from 'lucide-react';
+import { Download, ImageIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import * as z from "zod";
 
@@ -16,6 +16,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { amountOptions, formSchema, resolutionOptions } from './constants';
+import { Card, CardFooter } from '@/components/ui/card';
+import Image from 'next/image';
 
 const ImagePage = () => {
   const router = useRouter();
@@ -132,7 +134,24 @@ const ImagePage = () => {
             {images.length === 0 && !isLoading && (
               <Empty label='No images generated' />
             )}
-            <div>Images will be rendered here</div>
+            <div className='grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+              {images.map((src) => (
+                <Card key={src} className='overflow-hidden rounded-lg'>
+                  <div className='relative aspect-square'>
+                    <Image alt='Image' fill src={src} />
+                  </div>
+                  <CardFooter className='p-2'>
+                    <Button
+                      onClick={() => window.open(src)}
+                      variant='secondary'
+                      className='w-full'>
+                      <Download className='w-4 h-4 mr-2' />
+                      Download
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
-import { Music } from 'lucide-react';
+import { VideoIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import * as z from "zod";
 
@@ -46,7 +46,7 @@ const MusicPage = () => {
   }
   return (
     <div>
-      <Heading title={'Music Generation'} description={'Turn your prompt into music'} icon={Music} iconColor='text-emerald-500' bgColor='bg-emerald-500/10' />
+      <Heading title={'Video Generation'} description={'Turn your prompt into a video'} icon={VideoIcon} iconColor='text-orange-700' bgColor='bg-orange-700/10' />
       <div className='px-4 lg:px-8'>
         <div>
           <Form {...form}>

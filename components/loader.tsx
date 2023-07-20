@@ -18,8 +18,16 @@ export const Loader = () => {
       "AI is tapping into its vast neural network, traversing digital 🌐 to fetch the knowledge you seek. Sit back and let the information flow."
     ];
 
-    const randomPun = puns[Math.floor(Math.random() * puns.length)];
-    setPun(randomPun);
+    const randomPun = () => {
+      const punIndex = Math.floor(Math.random() * puns.length);
+      setPun(puns[punIndex]);
+    };
+
+    randomPun();
+
+    const interval = setInterval(randomPun, Math.floor(Math.random() * 3000) + 2000); // Change pun every 2-5 seconds
+
+    return () => clearInterval(interval); // Cleanup function to clear interval on unmount
   }, []);
   return (
     <div className='flex flex-col items-center justify-center h-full gap-y-4'>

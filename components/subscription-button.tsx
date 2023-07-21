@@ -9,6 +9,7 @@ interface SubscriptionButtonProps {
 }
 export const SubscriptionButton = ({ isPro = false }: SubscriptionButtonProps) => {
   const [loading, setLoading] = useState(false);
+
   const onClick = async () => {
     try {
       setLoading(true);
@@ -22,7 +23,7 @@ export const SubscriptionButton = ({ isPro = false }: SubscriptionButtonProps) =
     }
   }
   return (
-    <Button variant={isPro ? "default" : "premium"} >
+    <Button variant={isPro ? "default" : "premium"} disabled={loading} onClick={onClick}>
       {isPro ? "Manage Subscription" : "Upgrade"}
       {!isPro && <Zap className="w-4 h-4 ml-2 fill-white" />
       }

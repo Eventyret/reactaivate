@@ -12,6 +12,7 @@ const SettingsPage = async () => {
         <div className='text-sm text-muted-foreground'>
           {isPro ? "You are currently on a pro plan." : "You are currently on a free plan."}
         </div>
+
         <SubscriptionButton isPro={isPro} />
       </div>
     </div>

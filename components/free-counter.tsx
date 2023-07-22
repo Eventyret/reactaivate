@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react'
-import { Card, CardContent } from './ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { MAX_FREE_COUNTS } from '@/constants'
 import { Progress } from '@/components/ui/progress'
 import { Button } from '@/components/ui/button'

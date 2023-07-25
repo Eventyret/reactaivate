@@ -1,6 +1,6 @@
 "use client"
 
-import { Card } from '@/temp/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { TOOLS } from '@/constants';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';

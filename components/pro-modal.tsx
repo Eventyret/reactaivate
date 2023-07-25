@@ -11,12 +11,12 @@ import {
   DialogTitle,
   DialogDescription,
   DialogFooter
-} from "@/temp/components/ui/dialog";
-import { Badge } from "@/temp/components/ui/badge";
-import { Button } from "@/temp/components/ui/button";
+} from "@/components/ui/dialog";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useProModal } from "@/hooks/use-pro-modal";
 import { TOOLS } from "@/constants";
-import { Card } from "@/temp/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import toast from 'react-hot-toast';
 

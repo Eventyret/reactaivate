@@ -6,19 +6,19 @@ import { MessageSquare } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import Heading from '@/temp/components/heading';
+import Heading from '@/components/heading';
 import { formSchema } from './constants';
-import { Form, FormControl, FormField, FormItem } from '@/temp/components/ui/form';
-import { Input } from '@/temp/components/ui/input';
-import { Button } from '@/temp/components/ui/button';
+import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { ChatCompletionRequestMessage } from 'openai';
-import { Empty } from '@/temp/components/empty';
-import { Loader } from '@/temp/components/loader';
+import { Empty } from '@/components/empty';
+import { Loader } from '@/components/loader';
 import { cn } from '@/lib/utils';
-import { UserAvatar } from '@/temp/components/user-avatar';
-import { BotAvatar } from '@/temp/components/bot-avatar';
+import { UserAvatar } from '@/components/user-avatar';
+import { BotAvatar } from '@/components/bot-avatar';
 import { useProModal } from '@/hooks/use-pro-modal';
 import toast from 'react-hot-toast';
 

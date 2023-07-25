@@ -15,7 +15,8 @@ const MobileSidebar = ({ apiLimitCount = 0, isPro = false }: MobileSidebarProps)
 
   useEffect(() => {
     setIsMounted(true)
-  }), []
+  }, [])
+
   if (!isMounted) return null
   return (
     <Sheet>

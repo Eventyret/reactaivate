@@ -3,7 +3,7 @@ import MobileSidebar from './mobile-sidebar';
 import { getApiLimitCount } from '@/lib/api-limit';
 import { checkSubscription } from '@/lib/subscription';
 
-const NavBar = async () => {
+export const NavBar = async () => {
   const apiLimitCount = await getApiLimitCount();
   const isPro = await checkSubscription();
   return (
@@ -15,5 +15,3 @@ const NavBar = async () => {
     </div>
   );
 }
-
-export default NavBar;

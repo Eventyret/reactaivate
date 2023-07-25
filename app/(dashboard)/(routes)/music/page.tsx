@@ -6,12 +6,12 @@ import { Music } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import * as z from "zod";
 
-import { Empty } from '@/components/empty';
-import Heading from '@/components/heading';
-import { Loader } from '@/components/loader';
-import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+import { Empty } from '@/temp/components/empty';
+import Heading from '@/temp/components/heading';
+import { Loader } from '@/temp/components/loader';
+import { Button } from '@/temp/components/ui/button';
+import { Form, FormControl, FormField, FormItem } from '@/temp/components/ui/form';
+import { Input } from '@/temp/components/ui/input';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { formSchema } from './constants';

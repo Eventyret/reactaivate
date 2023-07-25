@@ -1,9 +1,9 @@
 "use client"
 
 import { Menu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import Sidebar from '@/components/sidebar';
+import { Button } from '@/temp/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/temp/components/ui/sheet';
+import Sidebar from '@/temp/components/sidebar';
 import { use, useEffect, useState } from 'react';
 
 interface MobileSidebarProps {

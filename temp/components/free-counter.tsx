@@ -1,9 +1,9 @@
 "use client"
 import { useEffect, useState } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from '@/temp/components/ui/card'
 import { MAX_FREE_COUNTS } from '@/constants'
-import { Progress } from '@/components/ui/progress'
-import { Button } from '@/components/ui/button'
+import { Progress } from '@/temp/components/ui/progress'
+import { Button } from '@/temp/components/ui/button'
 import { Zap } from 'lucide-react'
 import { useProModal } from '@/hooks/use-pro-modal'
 
